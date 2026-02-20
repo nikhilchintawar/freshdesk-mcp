@@ -25,21 +25,18 @@ A Model Context Protocol (MCP) server that fetches Freshdesk ticket details and 
 
 ## Installation
 
-### Quick Install (Recommended)
+### Using npx (Recommended)
 
-Install directly from GitHub:
+No installation required. Add directly to your config:
 
-```bash
-npm install -g github:nikhilchintawar/freshdesk-mcp
-```
-
-Then add to your Claude Desktop config:
+**Claude Desktop** (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS):
 
 ```json
 {
   "mcpServers": {
     "freshdesk": {
-      "command": "freshdesk-mcp",
+      "command": "npx",
+      "args": ["-y", "github:nikhilchintawar/freshdesk-mcp"],
       "env": {
         "FRESHDESK_API_KEY": "your-api-key",
         "FRESHDESK_DOMAIN": "yourcompany"
@@ -49,9 +46,7 @@ Then add to your Claude Desktop config:
 }
 ```
 
-### Using npx (No Global Install)
-
-Add directly to Claude Desktop config without installing:
+**Claude Code** (`~/.claude/settings.json`):
 
 ```json
 {
@@ -75,11 +70,11 @@ Add directly to Claude Desktop config without installing:
 git clone https://github.com/nikhilchintawar/freshdesk-mcp.git
 cd freshdesk-mcp
 
-# Install dependencies and build
+# Install dependencies
 npm install
 ```
 
-Then add to Claude Desktop config:
+Then add to your config:
 
 ```json
 {
@@ -98,10 +93,11 @@ Then add to Claude Desktop config:
 
 ## Configuration
 
-### Claude Desktop Config Location
+### Config File Locations
 
-- **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+- **Claude Desktop (macOS):** `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Claude Desktop (Windows):** `%APPDATA%\Claude\claude_desktop_config.json`
+- **Claude Code:** `~/.claude/settings.json`
 
 ### Environment Variables
 
