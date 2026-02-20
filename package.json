@@ -1,0 +1,37 @@
+{
+  "name": "freshdesk-mcp",
+  "version": "1.0.0",
+  "description": "Freshdesk MCP server for fetching ticket details and context",
+  "type": "module",
+  "main": "./build/index.js",
+  "bin": {
+    "freshdesk-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js",
+    "dev": "tsc --watch",
+    "start": "node build/index.js",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "build",
+    "src"
+  ],
+  "keywords": [
+    "mcp",
+    "freshdesk",
+    "model-context-protocol",
+    "claude",
+    "anthropic"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "typescript": "^5.9.3"
+  }
+}
