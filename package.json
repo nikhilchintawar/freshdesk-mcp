@@ -8,14 +8,12 @@
     "freshdesk-mcp": "./build/index.js"
   },
   "scripts": {
-    "build": "./node_modules/.bin/tsc && chmod 755 build/index.js",
-    "dev": "./node_modules/.bin/tsc --watch",
-    "start": "node build/index.js",
-    "prepare": "npm run build"
+    "build": "tsc && chmod 755 build/index.js",
+    "dev": "tsc --watch",
+    "start": "node build/index.js"
   },
   "files": [
-    "build",
-    "src"
+    "build"
   ],
   "keywords": [
     "mcp",
