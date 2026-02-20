@@ -24,6 +24,11 @@
   ],
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhilchintawar/freshdesk-mcp.git"
+  },
+  "homepage": "https://github.com/nikhilchintawar/freshdesk-mcp#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.26.0",
     "zod": "^4.3.6"
